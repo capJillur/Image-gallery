@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1 class="title"><b>Media Gallery</b></h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterGallery('all')">All</button>
+    <button onclick="filterGallery('videos')">Videos</button>
+    <button onclick="filterGallery('download')">Download</button>
+  </div>
+
+  <div class="gallery">
+    <!-- Images -->
+    <img src="images/Image 1.jpg" class="gallery-item image" alt="Image 1" onclick="openLightbox(this.src)" />
+    <img src="images/Image 2.jpg" class="gallery-item image" alt="Image 2" onclick="openLightbox(this.src)" />
+    <img src="images/Image 3.jpg" class="gallery-item image" alt="Image 3" onclick="openLightbox(this.src)" />
+    <img src="images/Image 4.jpg" class="gallery-item image" alt="Image 4" onclick="openLightbox(this.src)" />
+    <img src="images/img5.jpg" class="gallery-item image" alt="img5" onclick="openLightbox(this.src)" />
+
+
+
+    <!-- Videos -->
+    <video class="gallery-item video" controls>
+      <source src="videos/vid1.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <video class="gallery-item video" controls>
+      <source src="videos/vid2.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <img class="lightbox-content" id="lightbox-image" />
+    <button class="prev" onclick="prevImage()">❮</button>
+    <button class="next" onclick="nextImage()">❯</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
